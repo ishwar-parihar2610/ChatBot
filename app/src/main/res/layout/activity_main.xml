@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/chatBotRecycleView"
+      android:layout_above="@id/msgRelativeLayout"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      android:orientation="horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/msgRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/msgEdit"
+            android:hint="@string/enter_message"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:layout_toLeftOf="@id/sendBtn"
+            android:layout_margin="3dp"
+            android:layout_centerInParent="true"
+            />
+        
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_send"
+            android:id="@+id/sendBtn"
+            app:fabCustomSize="45dp"
+            android:backgroundTint="@color/fab_color"
+            android:tint="@color/white"
+            android:layout_margin="4dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+</layout>
